@@ -1,80 +1,74 @@
-<html>
-<title>Gallery</title>    
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
     <link rel="stylesheet" href="Gallery.css">
-    <body class="body">
-       
-        <video autoplay muted loop>
-            <source src="Gradient Liquid Blue Shapes Animation Background video _ Footage _ Screensaver.mp4" type="video/mp4">
-        </video>
-    
-     
-        
-            <div class="container">
-                <div class="menu-container">
-                    <button class="menu-button" onclick="toggleMenu()">Menu</button>
-                    <ul class="menu" id="menu">
-                        <li><a href="menu.html">Home</a></li>
-                        <li><a href="CV.html">CV</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-        
-                <div class="Gallery">Gallery</div>
-        
-                <div class="row">
-                    <a href="image1.jpg">
-                        <img class="image" src="epl_liverpool_fc_third.png">
-                    </a>
-                    <a href="image2.jpg">
-                        <img class="image" src="1f176018e6d436aaecc7907d5e4055db.png">
-                    </a>
-                    <a href="image3.jpg">
-                        <img class="image" src="wp11870509.png">
-                    </a>
-                </div>
-        
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal">&times;</span>
-                    <img class="modal-content" id="modalImg">
-                </div>
-        
-                <div class="row">
-                    <a href="ec343-16956641375021-1920.avif">
-                        <img class="image" src="7455028d998242e24304b6b5232d2046b360faefa32a40d510df46e260578be5.png">
-                    </a>
-                    <a href="f6zdleqwcaagus2-1695787750560.webp">
-                        <img class="image" src="Premier-League.png">
-                    </a>
-                    <a href="0_GettyImages-1245828155.webp">
-                        <img class="image" src="Soccerment_LFC.png">
-                    </a>
-                </div>
-            </div>
-        
-            <script>
-                function toggleMenu() {
-                    var menu = document.getElementById('menu');
-                    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-                }
-        
-                function closeModal() {
-                    document.getElementById('myModal').style.display = 'none';
-                }
-        
-             
-                var modal = document.getElementById('myModal');
-                var modalImg = document.getElementById('modalImg');
-        
-                var images = document.getElementsByClassName('image');
-                for (var i = 0; i < images.length; i++) {
-                    images[i].addEventListener('click', function (event) {
-                        modal.style.display = 'block';
-                        modalImg.src = event.target.src;
-                    });
-                }
-            </script>
-        </body>
-    
 </head>
+<body class="body">
+    <video autoplay muted loop>
+        <source src="Gradient Liquid Blue Shapes Animation Background video _ Footage _ Screensaver.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div class="menu-container">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <ul class="menu" id="menu">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="Gallery">Gallery</div>
+
+        <div class="row">
+            <a href="image1.jpg" onclick="openModal('epl_liverpool_fc_third.png')">
+                <img class="image" src="epl_liverpool_fc_third.png" alt="Image 1">
+            </a>
+            <a href="image2.jpg" onclick="openModal('1f176018e6d436aaecc7907d5e4055db.png')">
+                <img class="image" src="1f176018e6d436aaecc7907d5e4055db.png" alt="Image 2">
+            </a>
+            <a href="image3.jpg" onclick="openModal('wp11870509.png')">
+                <img class="image" src="wp11870509.png" alt="Image 3">
+            </a>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <div class="row">
+            <a href="ec343-16956641375021-1920.avif" onclick="openModal('7455028d998242e24304b6b5232d2046b360faefa32a40d510df46e260578be5.png')">
+                <img class="image" src="7455028d998242e24304b6b5232d2046b360faefa32a40d510df46e260578be5.png" alt="Image 4">
+            </a>
+            <a href="f6zdleqwcaagus2-1695787750560.webp" onclick="openModal('Premier-League.png')">
+                <img class="image" src="Premier-League.png" alt="Image 5">
+            </a>
+            <a href="0_GettyImages-1245828155.webp" onclick="openModal('Soccerment_LFC.png')">
+                <img class="image" src="Soccerment_LFC.png" alt="Image 6">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function openModal(imageSrc) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modalImg');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
