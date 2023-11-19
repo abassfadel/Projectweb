@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="signup.css">
+  <title>Sign Up Page</title>
+</head>
+<body style="max-width: 800px; margin: auto; padding: 20px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 80px; margin-top: 125px;">
+
+  <form action="signup.php" method="post"> 
+    <div class="input-box">
+      <label style="color: rgb(0, 0, 0);" for="first-name">First Name:</label>
+      <input type="text" name="fname" required>
+    </div>
+
+    <div class="input-box">
+      <label style="color: rgb(0, 0, 0);" for="last-name">Last Name:</label>
+      <input type="text"  name="lname" required>
+    </div>
+
+    <div class="input-box">
+      <label style="color: rgb(0, 0, 0);" for="username">Username:</label>
+      <input type="text"  name="username" required>
+    </div>
+
+    <div class="input-box">
+      <label style="color: rgb(0, 0, 0);" for="password">Password:</label>
+      <input type="password" name="password" required>
+    </div>
+
+    <div class="input-box">
+      <label style="color: rgb(0, 0, 0);" for="birthdate">Date of Birth:</label>
+      <input type="date" name="birthdate" required>
+    </div>
+
+    <div class="input-box">
+      <label style="color: rgb(0, 0, 0);" for="sex">Sex:</label>
+      <select name="sex" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div class="input-box">
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+
+  <p style="color: rgb(0, 0, 0);">Already have an account? <a href="menu.html">Login</a></p>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "accounts": [
+        {
+            "username": "ds",
+            "password": "123",
+            "fname": "Abbass",
+            "lname": "Fadel",
+            "age": "2004-02-10",
+            "sex": "male"
+        },
+        {
+            "username": "dsss",
+            "password": "123123",
+            "fname": "Abbass",
+            "lname": "Fadel",
+            "age": "2023-11-24",
+            "sex": "male"
+        },
+        {
+            "username": "dssss",
+            "password": "123123",
+            "fname": "Abbass",
+            "lname": "Fadel",
+            "age": "2023-11-24",
+            "sex": "male"
+        },
+        {
+            "username": "dssss12",
+            "password": "123123",
+            "fname": "Abbass",
+            "lname": "Fadel",
+            "age": "2023-11-24",
+            "sex": "male"
+        }
+    ]
+}

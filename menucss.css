@@ -1,0 +1,117 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .input-box {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+
+  .video-container {
+    flex: 1; 
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .auth-sidebar-video {
+    width: 100%;
+    height: 100%; 
+  }
+  
+  .login-container {
+    flex: 1; 
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  form {
+    max-width: 400px; 
+    margin: 0 auto;
+  }
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .auth-sidebar-video {
+    width: 125%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  .login-container {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+
+  .right{
+    float: left;
+  width: 40%; 
+}
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.sign{
+  color: white;
+}
+

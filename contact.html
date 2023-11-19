@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact.css">
+   
+    <title>Abbas's-CV</title>
+</head>
+<body class="body">
+
+    <div class="header">
+        <div class="username-container">
+            <div class="username" id="username"></div>
+        </div>
+        <button class="logout-button" onclick="returnToMenu()">Logout</button>
+    </div>
+
+    <video autoplay muted loop>
+        <source src="Technology Background Loop Video - Non Copyright Video.mp4" type="video/mp4"> 
+    </video>
+
+    <div class="container">
+        <div class="menu-container">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <ul class="menu" id="menu">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+        </div>
+
+        <div class="Info"> 
+            <div class="name">Abbass Hussein Fadel</div>
+            <div class="info">ID: 202105630</div>
+            <div class="info">Phone: 76706181</div>
+            <div class="info">Email: abass.fadel@lau.edu</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function returnToMenu() {
+            window.location.href = 'menu.html';
+        }
+
+    
+        fetch('users.json')
+            .then(response => response.json())
+            .then(data => {
+            
+                var username = data.accounts[0].username;
+
+                document.getElementById('username').innerText = 'Username: ' + username;
+            })
+            .catch(error => console.error('Error fetching username:', error));
+    </script>
+</body>
+</html>
